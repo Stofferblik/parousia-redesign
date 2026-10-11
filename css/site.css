@@ -5,7 +5,7 @@ body { margin: 0; background: var(--surface); }
 .pz a:hover { color: var(--ink); }
 .pz input, .pz textarea { font: inherit; font-size: 17px; color: var(--ink); background: var(--surface-raised); border: 1.5px solid var(--line-strong); border-radius: 12px; padding: 12px 14px; width: 100%; box-sizing: border-box; }
 .pz input:focus, .pz textarea:focus { outline: 2px solid var(--focus); outline-offset: 2px; }
-.pz-header { position: sticky; top: 0; z-index: 20; }
+.pz-header { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; }
 .pz-header-in { position: relative; }
 .pz-header.open .pz-nav { display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--surface-raised); border-bottom: 1px solid var(--line); box-shadow: var(--shadow-raised); padding: 8px 16px 16px; gap: 2px; }
 .pz-header.open .pz-nav a { padding: 12px; }
@@ -15,3 +15,4 @@ body { margin: 0; background: var(--surface); }
   main h2 { font-size: 30px !important; line-height: 36px !important; }
   .pz-leaf[style*="padding:64px 48px"], .pz-leaf[style*="padding:56px 48px"], [style*="padding:48px;"] { padding: 40px 24px !important; }
 }
+.concept-note { margin: 0; font-weight: 600; color: var(--ink); }

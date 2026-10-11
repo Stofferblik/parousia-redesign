@@ -106,7 +106,7 @@
 </div>
 <script>
 (function(){var h=document.querySelector('.pz-header'),b=document.querySelector('.pz-menu-btn');if(!h||!b)return;b.setAttribute('aria-expanded','false');b.addEventListener('click',function(){var o=h.classList.toggle('open');b.setAttribute('aria-expanded',o?'true':'false');b.setAttribute('aria-label',o?'Menu sluiten':'Menu openen');});
-document.querySelectorAll('form').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();alert('Dit is een ontwerpvoorstel: het formulier verstuurt niets.');});});
+document.querySelectorAll('form').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();var m=f.querySelector('.concept-note');if(!m){m=document.createElement('p');m.className='concept-note';m.setAttribute('role','status');m.textContent='Dit is een ontwerpvoorstel: het formulier verstuurt niets.';f.appendChild(m);}});});
 var s=document.querySelector('.pz-footer-bottom span:last-child');if(s)s.innerHTML='<a href="https://www.parousiazoetermeer.nl/privacyverklaring">Privacyverklaring</a> · <a href="https://www.parousiazoetermeer.nl/wiezijnwij/anbi-transparantie">ANBI-transparantie</a>';})();
 </script>
 </body>
