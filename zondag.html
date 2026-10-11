@@ -105,6 +105,12 @@
 <footer class="pz-footer"><div class="pz-footer-in"><div><p class="pz-footer-name">Parousia Zoetermeer</p><p>Evangelische Gemeente CAMA Parousia<br/>Gebouw De Uitkijk, Wattstraat 64<br/>2723 RD Zoetermeer<br/>079 347 85 48</p></div><div><h4>Bezoeken</h4><ul><li><a href="zondag.html">Zondag</a></li><li><a href="nieuw-hier.html">Nieuw hier?</a></li><li><a href="route.html">Route en parkeren</a></li><li><a href="livestreams.html">Livestream</a></li><li><a href="kerkapp.html">Parousia kerkapp</a></li></ul></div><div><h4>Gemeente</h4><ul><li><a href="wie-we-zijn.html">Wie we zijn</a></li><li><a href="leiderschapsteam.html">Leiding</a></li><li><a href="bedieningen.html">Bedieningen</a></li><li><a href="vacatures.html">Vacatures</a></li><li><a href="actueel.html">Nieuws</a></li></ul></div><div><h4>Praktisch</h4><ul><li><a href="giften.html">Giften</a></li><li><a href="zalen-huren.html">Zalen huren</a></li><li><a href="vertrouwenspersoon.html">Vertrouwenspersoon</a></li><li><a href="lidmaatschap.html">Lidmaatschap</a></li><li><a href="https://www.parousiazoetermeer.nl/inloggen-bezoekers">Inloggen leden</a></li></ul></div></div><div class="pz-footer-bottom"><span>Parousia Zoetermeer is een ANBI-instelling</span><span><a href="privacy.html">Privacyverklaring</a> · <a href="anbi.html">ANBI-transparantie</a> · <a href="praktisch.html">Alle praktische info</a></span></div></footer>
 </div>
 <script>(function () {
+  // Always open a new page at the top (some viewers keep the previous scroll position).
+  try { if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; } catch (e) {}
+  function toTop() { if (!location.hash) window.scrollTo(0, 0); }
+  toTop();
+  window.addEventListener('load', toTop);
+  window.addEventListener('pageshow', toTop);
   var h = document.querySelector('.pz-header'), b = document.querySelector('.pz-menu-btn');
   if (h && b) {
     b.setAttribute('aria-expanded', 'false');
